@@ -1,0 +1,19 @@
+     1                                  [org 0x0100]
+     2                                  
+     3 00000000 B82200                  mov ax, 34
+     4 00000003 BB1500                  mov bx, 21
+     5 00000006 29D8                    sub ax,bx ;ax=13,bx=21,cx=0
+     6 00000008 89C1                    mov cx,ax ;ax=13,bx=21,cx=13
+     7 0000000A 29C3                    sub bx,ax ;ax=13,bx=8,cx=13
+     8 0000000C 89D9                    mov cx,bx ;ax=13,bx=8,cx=8
+     9 0000000E 29D8                    sub ax,bx ;ax=5,bx=8,cx=8
+    10 00000010 89C1                    mov cx,ax ;ax=5,bx=8,cx=5
+    11 00000012 29C3                    sub bx,ax ;ax=5,bx=3,cx=5
+    12 00000014 29D8                    sub ax,bx ;ax=2,bx=3,cx=5
+    13 00000016 89D9                    mov cx,bx ;ax=2,bx=3,cx=3
+    14 00000018 29C3                    sub bx,ax ;ax=2,bx=1,cx=3
+    15 0000001A 29D8                    sub ax,bx ;ax=1,bx=1,cx=3
+    16 0000001C 29D8                    sub ax,bx ;ax=0,bx=1,cx=3
+    17                                  
+    18 0000001E B8004C                  mov ax, 0x4c00
+    19 00000021 CD21                    int 0x21

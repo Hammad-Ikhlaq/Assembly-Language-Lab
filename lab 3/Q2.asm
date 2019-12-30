@@ -1,0 +1,11 @@
+[org 0x100]
+
+mov ax, [0x0025]
+mov [0x0FFF], ax
+
+mov bx,[0x0010]
+mov [0x002F],bx
+
+mov ax, 0x4c00 		; terminate program
+int 0x21
+
